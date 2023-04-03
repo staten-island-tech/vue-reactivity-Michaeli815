@@ -1,20 +1,27 @@
 <script>
 export default {
-  name: "CardItem",
+  name: "Card",
+  props: {
+    title: String,
+    price: String,
+    image: String,
+  },
 };
 </script>
 
 <template>
-  <div>
-    <h1>gdsgss</h1>
+  <div class="card">
+    <h2>{{ title }}</h2>
+    <img src="" alt="" />
+    <p>{{ price }}</p>
   </div>
 </template>
 
 <style>
-#card {
+.card {
   box-shadow: 10px 7px 5px rgb(255, 87, 87);
   border-radius: 3rem;
-  width: 25%;
+  width: %;
   height: 43rem;
   font-size: 7rem;
   background-color: rgb(228, 37, 37);
