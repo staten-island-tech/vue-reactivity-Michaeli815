@@ -1,36 +1,73 @@
 <script>
+import stock from "../views/HomeView.vue";
+
 export default {
-  name: "Card",
+  data() {
+    return {
+      cart: [],
+    };
+  },
+  /*  components: stock, */
+  name: "CardItem",
+
   props: {
     title: String,
     price: String,
     image: String,
   },
+  methods: {
+    addItemtoCart(stock) {
+      console.log(this.card);
+    },
+  },
 };
 </script>
 
 <template>
-  <div class="card">
-    <h2>{{ title }}</h2>
-    <img src="" alt="" />
-    <p>{{ price }}</p>
+  <div class="container">
+    <div class="card">
+      <h2>{{ title }}</h2>
+      <img :src="image" alt="" />
+      <h3>{{ price }}</h3>
+      <button class="adddd" @click="addItemtoCart(stock)">Add to Cart</button>
+    </div>
   </div>
 </template>
 
 <style>
 .card {
-  box-shadow: 10px 7px 5px rgb(255, 87, 87);
+  box-shadow: 10px 7px 5px rgb(161, 122, 122);
   border-radius: 3rem;
-  width: %;
-  height: 43rem;
-  font-size: 7rem;
-  background-color: rgb(228, 37, 37);
+  width: 80%;
+  height: 75%;
+  font-size: 3rem;
+  background-color: rgb(255, 168, 168);
   margin: 8rem auto;
   align-items: center;
-  border: 0.3rem solid rgb(107, 2, 28);
+  border: 0.3rem solid rgb(216, 127, 149);
   padding: 3rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container {
+  columns: 1;
+}
+
+img {
+  width: 90%;
+}
+
+.adddd {
+  font-size: 3rem;
+  padding: 9rem auto;
+  margin: 3% auto;
+  border: 0.5rem solid rgb(92, 128, 100);
+  text-align: center;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  background-color: rgb(174, 228, 174);
 }
 </style>

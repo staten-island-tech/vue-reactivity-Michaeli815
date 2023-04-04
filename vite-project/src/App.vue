@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <nav>
     <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/about">Cart</RouterLink>
   </nav>
 
   <RouterView />
@@ -39,7 +39,7 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
   nav {
-    text-align: left;
+    text-align: center;
     margin-left: -1rem;
     font-size: 1rem;
 

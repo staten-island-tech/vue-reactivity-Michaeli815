@@ -1,11 +1,17 @@
-<script setup></script>
-
 <template>
-  <button class="addb">Add Item</button>
+  <div>
+    <button><slot></slot></button>
+  </div>
 </template>
 
+<script>
+export default {
+  name: "AddButton",
+};
+</script>
+
 <style>
-.addb {
+button {
   font-size: 3rem;
   font-size: 4rem;
   padding: 9rem auto;
