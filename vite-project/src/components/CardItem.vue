@@ -1,24 +1,23 @@
 <script>
+import { store } from "../store.js";
 import HomeView from "../views/HomeView.vue";
 
 export default {
   data() {
     return {
-      cart: [],
+      store,
       HomeView,
     };
   },
-  // components: 
+  // components:
   name: "CardItem",
 
   props: {
-    title: String,
-    price: String,
-    image: String,
+    card: Object,
   },
   methods: {
-    addItemtoCart() {
-      console.log(this.HomeView);
+    addItemtoCart(card) {
+      store.cart.push(card);
     },
   },
 };
@@ -27,10 +26,10 @@ export default {
 <template>
   <div class="container">
     <div class="card">
-      <h2>{{ title }}</h2>
-      <img :src="image" alt="" />
-      <h3>{{ price }}</h3>
-      <button class="adddd" @click="addItemtoCart()">Add to Cart</button>
+      <h2>{{ card.name }}</h2>
+      <img :src="card.image" alt="" />
+      <h3>{{ card.price }}</h3>
+      <button class="adddd" @click="addItemtoCart(card)">Add to Cart</button>
     </div>
   </div>
 </template>

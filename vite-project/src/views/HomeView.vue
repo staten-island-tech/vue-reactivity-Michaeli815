@@ -84,13 +84,7 @@ export default {
   <div class="all">
     <HeadTag class="header" />
     <div class="home">
-      <CardItem
-        v-for="card in stock"
-        :key="card.name"
-        :title="card.name"
-        :price="card.price"
-        :image="card.image"
-      />
+      <CardItem v-for="card in stock" :key="card.name" :card="card" />
     </div>
   </div>
 </template>
