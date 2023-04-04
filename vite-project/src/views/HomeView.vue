@@ -12,6 +12,7 @@ export default {
   },
   data: () => {
     return {
+      // stocks:"",
       stock: [
         {
           name: "Soccer ball",

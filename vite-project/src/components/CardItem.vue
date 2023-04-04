@@ -1,13 +1,14 @@
 <script>
-import stock from "../views/HomeView.vue";
+import HomeView from "../views/HomeView.vue";
 
 export default {
   data() {
     return {
       cart: [],
+      HomeView,
     };
   },
-  /*  components: stock, */
+  // components: 
   name: "CardItem",
 
   props: {
@@ -16,8 +17,8 @@ export default {
     image: String,
   },
   methods: {
-    addItemtoCart(stock) {
-      console.log(this.card);
+    addItemtoCart() {
+      console.log(this.HomeView);
     },
   },
 };
@@ -29,7 +30,7 @@ export default {
       <h2>{{ title }}</h2>
       <img :src="image" alt="" />
       <h3>{{ price }}</h3>
-      <button class="adddd" @click="addItemtoCart(stock)">Add to Cart</button>
+      <button class="adddd" @click="addItemtoCart()">Add to Cart</button>
     </div>
   </div>
 </template>
