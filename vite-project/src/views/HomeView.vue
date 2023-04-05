@@ -82,7 +82,7 @@ export default {
 
 <template>
   <div class="all">
-    <HeadTag class="header" />
+    <HeadTag class="header">Ball Shop</HeadTag>
     <div class="home">
       <CardItem v-for="card in stock" :key="card.name" :card="card" />
     </div>
@@ -94,16 +94,13 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  justify-content: space-evenly;
 }
 
 .header {
-  display: grid;
   grid-template-columns: 1fr;
   display: flex;
   justify-content: center;
 }
-
 .all {
   align-items: center;
   justify-content: center;

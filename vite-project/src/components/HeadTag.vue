@@ -1,17 +1,16 @@
 <script setup></script>
 
 <template>
-  <button class="header">Ball Shop</button>
+  <button class="header"><slot></slot></button>
 </template>
 
 <style>
 .header {
-  display: flex;
   justify-content: center;
   font-size: 7rem;
   margin: 3% auto;
   border: 1rem solid rgb(87, 166, 180);
-  width: 65%;
+  width: fit-content;
   text-align: center;
   border-radius: 3rem;
   box-sizing: border-box;

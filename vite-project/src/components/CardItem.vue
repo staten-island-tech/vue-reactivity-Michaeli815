@@ -53,7 +53,6 @@ export default {
 }
 
 .container {
-  columns: 1;
 }
 
 img {
@@ -69,5 +68,10 @@ img {
   border-radius: 2rem;
   box-sizing: border-box;
   background-color: rgb(174, 228, 174);
+}
+
+.adddd:hover {
+  background-color: darkgreen;
+  border: 0.5rem solid rgb(0, 0, 0);
 }
 </style>
